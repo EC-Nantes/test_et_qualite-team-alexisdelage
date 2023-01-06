@@ -52,16 +52,16 @@ def clic(event):
             table = np.zeros((n,n))
             Canvas.delete("all")
             Canvas.create_text(300, 300, text=f"The winner is player {'X' if winner==1 else 'O'} !", fill="black")
-            button = tk.Button(Canvas,text="reset",command = reset())
-            button.pack()
+
 
 def reset():
-    print(1)
     Canvas.delete("all")
     table = np.zeros((n,n))
     draw(table)
 
 draw(table)
+button = tk.Button(fenetre,text="reset",command=reset)
+button.pack()
 Canvas.bind("<Button-1>",clic)
 Canvas.pack()
 fenetre.mainloop()
