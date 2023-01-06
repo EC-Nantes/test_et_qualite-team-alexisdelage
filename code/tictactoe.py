@@ -51,7 +51,7 @@ def clic(event):
         if winner !=0:
             table = np.zeros((n,n))
             Canvas.delete("all")
-            Canvas.create_text(300, 300, text=f"The winner is player {'t' if winner==1 else 'O'} !", fill="black")
+            Canvas.create_text(300, 300, text=f"The winner is player {'X' if winner==1 else 'O'} !", fill="black",font=('Helvetica 30 bold'))
 
 
 def reset():
