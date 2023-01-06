@@ -60,8 +60,13 @@ def reset():
     draw(table)
 
 draw(table)
+
 button = tk.Button(fenetre,text="reset",command=reset)
 button.pack()
+
+exit_button = tk.Button(fenetre,text='Exit',command=lambda: fenetre.quit())
+exit_button.pack()
+
 Canvas.bind("<Button-1>",clic)
 Canvas.pack()
 fenetre.mainloop()
