@@ -32,9 +32,10 @@ def clic(event):
     global table
     x=int(int(event.x)//l)
     y=int(int(event.y)//l)
-    table[x][y]=player
-    player=-player
-    draw(table)
+    if table[x][y]==0:
+        table[x][y]=player
+        player=-player
+        draw(table)
                                    
 draw(table)
 Canvas.bind("<Button-1>",clic)
