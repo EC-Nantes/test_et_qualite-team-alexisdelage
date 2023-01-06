@@ -25,17 +25,17 @@ def draw(table):
             if table[i][j]==-1:
                 Canvas.create_oval(i*l+6,j*l+6,(i+1)*l-6,(j+1)*l-6,fill="white")
 
-def detect(X):
+def detect(t):
     for i in range(3):
-        if X[i][0]==X[i][1] and X[i][1]==X[i][2] and X[i][0]!=0:
-            return X[i][0]
+        if t[i][0]==t[i][1] and t[i][1]==t[i][2] and t[i][0]!=0:
+            return t[i][0]
     for j in range(3):
-        if X[0][j]==X[1][j] and X[1][j]==X[2][j] and X[0][j]!=0:
-            return X[0][j]
-    if X[0][0]==X[1][1] and X[1][1]==X[2][2] and X[0][0]!=0:
-        return X[0][0]
-    if X[0][2]==X[1][1] and X[1][1]==X[2][0] and X[0][2]!=0:
-        return X[0][2]
+        if t[0][j]==t[1][j] and t[1][j]==t[2][j] and t[0][j]!=0:
+            return t[0][j]
+    if t[0][0]==t[1][1] and t[1][1]==t[2][2] and t[0][0]!=0:
+        return t[0][0]
+    if t[0][2]==t[1][1] and t[1][1]==t[2][0] and t[0][2]!=0:
+        return t[0][2]
     return 0
 
 def clic(event):
@@ -51,7 +51,7 @@ def clic(event):
         if winner !=0:
             table = np.zeros((n,n))
             Canvas.delete("all")
-            Canvas.create_text(300, 300, text=f"The winner is player {'X' if winner==1 else 'O'} !", fill="black")
+            Canvas.create_text(300, 300, text=f"The winner is player {'t' if winner==1 else 'O'} !", fill="black")
 
 
 def reset():
