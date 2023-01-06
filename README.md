@@ -4,3 +4,4 @@ Membres de l'équipe :
 - Antoine Lorentz
 - Vincent Gallot
 - PAS Alexis Delage
+- Antoine Wencel
